@@ -1,0 +1,43 @@
+<!-- views/attendance_error_views.xml -->
+<odoo>
+    <record id="view_attendance_error_tree" model="ir.ui.view">
+        <field name="name">attendance.error.tree</field>
+        <field name="model">attendance.error</field>
+        <field name="arch" type="xml">
+            <tree string="Attendance Errors">
+                <field name="employee_id"/>
+                <field name="error_type"/>
+                <field name="error_date"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_attendance_error_form" model="ir.ui.view">
+        <field name="name">attendance.error.form</field>
+        <field name="model">attendance.error</field>
+        <field name="arch" type="xml">
+            <form string="Attendance Error">
+                <group>
+                    <field name="employee_id"/>
+                    <field name="error_type"/>
+                    <field name="error_date"/>
+                    <field name="description"/>
+                </group>
+                <footer>
+                    <button string="Save" type="object" name="action_save" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_attendance_error" model="ir.actions.act_window">
+        <field name="name">Attendance Errors</field>
+        <field name="res_model">attendance.error</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <menuitem id="menu_attendance_error" name="Attendance Errors" action="action_attendance_error" parent="hr_attendance.menu_hr_attendance_root"/>
+</odoo>

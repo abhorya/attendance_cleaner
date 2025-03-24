@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Attendance Adjustment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #6B3FA0; /* A slight Odoo-like purple accent */
+        }
+        .screenshot {
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            max-width: 700px;
+            display: block;
+        }
+        .caption {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Attendance Adjustment</h1>
+    <p>
+        <strong>Version:</strong> 1.0<br/>
+        <strong>Price:</strong> 100 USD<br/>
+        <strong>Category:</strong> Human Resources<br/>
+    </p>
+
+    <p>
+        The <em>Attendance Adjustment</em> module helps HR teams maintain accurate attendance data by
+        identifying and cleaning up duplicate records. It provides an intuitive wizard to
+        check for errors, preview cleanup, and safely remove unnecessary duplicates.
+    </p>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li><strong>Duplicate Detection:</strong> Quickly finds duplicate attendance records based on date and employee.</li>
+        <li><strong>Preview Before Cleanup:</strong> Shows a detailed summary of records to be removed or merged.</li>
+        <li><strong>Safe Cleanup:</strong> Retains first check-in and last check-out, and optionally merges duplicates.</li>
+        <li><strong>Error Handling:</strong> Notifies users of inconsistent records for manual review.</li>
+    </ul>
+
+    <h2>Screenshots</h2>
+
+    <!-- Screenshot 1 -->
+    <img src="screenshot_1.png" alt="Clean Attendance Records Wizard" class="screenshot"/>
+    <div class="caption">Figure 1: The wizard interface with Date, Duplicate Groups, and Cleanup Confirmation.</div>
+
+    <!-- Screenshot 2 -->
+    <img src="screenshot_2.png" alt="Check Errors Notification" class="screenshot"/>
+    <div class="caption">Figure 2: The notification that appears after clicking "Check Errors."</div>
+
+    <!-- Screenshot 3 -->
+    <img src="screenshot_3.png" alt="Preview Cleanup Notification" class="screenshot"/>
+    <div class="caption">Figure 3: Previewing which records will be cleaned up for the selected date.</div>
+
+    <h2>How It Works</h2>
+    <ol>
+        <li>
+            <strong>Select Date:</strong>
+            Choose the date you want to check or clean.
+        </li>
+        <li>
+            <strong>Check Errors:</strong>
+            The module displays any duplicates and potential conflicts in attendance records.
+        </li>
+        <li>
+            <strong>Preview Cleanup:</strong>
+            Provides a summary of which records will be retained and which will be merged or removed.
+        </li>
+        <li>
+            <strong>Confirm Cleanup:</strong>
+            Tick the confirmation checkbox and proceed to remove or merge duplicates.
+        </li>
+    </ol>
+
+    <h2>Installation & Configuration</h2>
+    <ol>
+        <li>Copy the module folder (e.g., <code>attendance_cleaner</code>) into your Odoo <code>addons</code> directory.</li>
+        <li>Ensure dependencies (<code>hr_attendance</code>, etc.) are installed and listed in the module's manifest.</li>
+        <li>Update your Apps list, then install the module from the Odoo Apps menu.</li>
+    </ol>
+
+    <h2>Support & License</h2>
+    <p>
+        For any questions or support, please contact us at:
+        <a href="mailto:sabry_youssef@me.com">sabry_youssef@me.com</a>.
+    </p>
+    <p>
+        <strong>License:</strong> OPL-1 (or as specified in the manifest)
+    </p>
+
+</body>
+</html>

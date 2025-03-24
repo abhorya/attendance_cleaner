@@ -1,0 +1,38 @@
+<!-- views/attendance_wizard_views.xml -->
+<odoo>
+    <record id="view_attendance_cleanup_wizard_form" model="ir.ui.view">
+        <field name="name">attendance.cleanup.wizard.form</field>
+        <field name="model">attendance.cleanup.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Attendance Cleanup Wizard">
+                <sheet>
+                    <group>
+                        <field name="date"/>
+                        <field name="duplicate_count" readonly="1"/>
+                        <field name="confirm"/>
+                    </group>
+                    <group>
+                        <field name="error_messages" readonly="1" nolabel="1" widget="text"/>
+                    </group>
+                    <footer>
+                        <button name="check_attendance_errors" type="object" string="Check Errors"
+                                class="oe_highlight"/>
+                        <button name="preview_cleanup" type="object" string="Preview Cleanup"/>
+                        <button name="clean_attendance_records" type="object" string="Clean Records"
+                                class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_attendance_cleanup_wizard" model="ir.actions.act_window">
+        <field name="name">Clean Attendance Records</field>
+        <field name="res_model">attendance.cleanup.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_attendance_cleanup_wizard" name="Clean Attendance Records"
+              action="action_attendance_cleanup_wizard" parent="hr_attendance.menu_hr_attendance_root"/>
+</odoo>
